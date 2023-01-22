@@ -27,6 +27,11 @@ function getImg(event) {
      <img src="${event.target.dataset.source}" >
   `);
   fullscreenImg.show();
+  gallery.addEventListener("keydown", (event) => {
+    if (event.code === "Escape") {
+      fullscreenImg.close();
+    }
+  });
 }
 
 console.log(galleryItems);
